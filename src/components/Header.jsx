@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/porfolio-logo.png'; // ← Importa tu logo correctamente
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +13,10 @@ function Header() {
     <header className="header">
       <div className="container">
         <div className="logo">
-        <NavLink to="/">
-  <img src="/porfolio-logo.png" alt="Logo Francis" className="logo-img" />
-</NavLink>                </div>
+          <NavLink to="/">
+            <img src={logo} alt="Logo Francis" className="logo-img" />
+          </NavLink>
+        </div>
 
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <ul>
@@ -22,6 +24,8 @@ function Header() {
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Projects</NavLink></li>
             <li><NavLink to="/about" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>About</NavLink></li>
             <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Contact</NavLink></li>
+            <li><NavLink to="/resume" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Resume</NavLink></li>
+
           </ul>
         </nav>
 
