@@ -8,6 +8,9 @@ import unityIcon from '../assets/unity-icon.png';
 import psIcon from '../assets/ps-icon.png';
 import githubIcon from '../assets/github-icon.jpg';
 
+import { NavLink } from 'react-router-dom';
+
+
 function Home() {
   return (
     <section className="home">
@@ -22,8 +25,8 @@ function Home() {
             creative touch.
           </p>
           <div className="hero-buttons">
-            <button>Contact</button>
-            <button>Projects</button>
+            <NavLink to="/resume" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Resume CV</NavLink>
+            <NavLink to="/projects" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Projects</NavLink>
           </div>
         </div>
         <div className="hero-img">
@@ -40,13 +43,13 @@ function Home() {
           </div>
           <div className="about-cards">
             <div className="card">
-              <p>Soy un desarrollador front-end con enfoque en diseño funcional y adaptativo.</p>
+              <p>I am a front-end developer with a focus on functional and responsive design.</p>
             </div>
             <div className="card">
-              <p>Tengo experiencia creando interfaces con HTML, CSS, JavaScript y React.</p>
+              <p>I have experience creating interfaces with HTML, CSS, JavaScript and React.</p>
             </div>
             <div className="card">
-              <p>Busco constantemente mejorar mis habilidades con herramientas modernas y buenas prácticas.</p>
+              <p>I am constantly seeking to improve my skills with modern tools and best practices.</p>
             </div>
           </div>
         </div>
@@ -71,11 +74,11 @@ function Home() {
         <div className="projects-list">
           <div className="project-card">
             <h4>Portfolio</h4>
-            <p>Sitio web personal diseñado para mostrar mis habilidades, proyectos y contacto. Implementado con React, HTML y CSS.</p>
+            <p>Personal website designed to showcase my skills, projects, and contacts. Implemented with React, HTML, and CSS.</p>
           </div>
           <div className="project-card">
             <h4>Calculator</h4>
-            <p>Réplica funcional de la calculadora de iOS desarrollada en JavaScript puro. Incluye operaciones básicas y diseño responsive.</p>
+            <p>A functional replica of the iOS calculator developed in pure JavaScript. It includes basic operations.</p>
           </div>
         </div>
       </div>
@@ -84,7 +87,9 @@ function Home() {
       <div className="contact">
         <h3>Contact</h3>
         <form className="contact-form">
-          <input type="text" placeholder="Name" />
+          <input type="name" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+
           <textarea placeholder="Message"></textarea>
           <button type="submit">Submit</button>
         </form>

@@ -17,6 +17,8 @@ const projectData = [
         html: '<!-- Código HTML del proyecto Galaxy -->',
         css: '/* Código CSS del proyecto Galaxy */',
         js: '// Código JavaScript del proyecto Galaxy',
+        react: '// Código react del proyecto Galaxy',
+
       },
     },
     {
@@ -28,6 +30,7 @@ const projectData = [
         html: '<!-- Código HTML del proyecto Nebula -->',
         css: '/* Código CSS del proyecto Nebula */',
         js: '// Código JavaScript del proyecto Nebula',
+        react: '// Código react del proyecto Galaxy',
       },
     },
     {
@@ -39,10 +42,12 @@ const projectData = [
         html: '<!-- Código HTML del proyecto Cosmos -->',
         css: '/* Código CSS del proyecto Cosmos */',
         js: '// Código JavaScript del proyecto Cosmos',
+        react: '// Código react del proyecto Galaxy',
+
       },
     },
   ];
-  
+
 function Projects() {
   const [activeProject, setActiveProject] = useState(projectData[0]);
 
@@ -86,6 +91,11 @@ function Projects() {
             <pre>{activeProject.code.js}</pre>
           </div>
 
+          <div className="code-section react">
+            <h3>Code [React]</h3>
+            <pre>{activeProject.code.js}</pre>
+          </div>
+
           <div className="resources">
   <h3>Resources</h3>
   <div className="resource-grid">
@@ -100,6 +110,13 @@ function Projects() {
     </div>
     <div className="resource-card">
       <p>GitHub Repositories</p>
+    </div>
+
+    <div className="resource-card">
+      <p>Node.js</p>
+    </div>
+    <div className="resource-card">
+      <p>Node.js</p>
     </div>
   </div>
 </div>
