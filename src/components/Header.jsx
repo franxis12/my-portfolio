@@ -21,11 +21,11 @@ function Header() {
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <ul>
             <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Home</NavLink></li>
+            <li><NavLink to="/skills" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Skills</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Projects</NavLink></li>
             <li><NavLink to="/about" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>About</NavLink></li>
             <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Contact</NavLink></li>
             <li><NavLink to="/resume" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Resume</NavLink></li>
-            <li><NavLink to="/skills" className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}>Skills</NavLink></li>
 
 
           </ul>

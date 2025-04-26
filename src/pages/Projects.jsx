@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-// Importar las imágenes
 import project1Thumb from '../assets/project1-thumb.png';
 import project1Main from '../assets/project1-main.png';
 import project2Thumb from '../assets/project2-thumb.png';
@@ -10,39 +10,45 @@ import project3Main from '../assets/project3-main.png';
 const projectData = [
     {
       id: 1,
-      title: 'Galaxy',
+      title: 'IOS Calculator Replica',
       thumbnail: project1Thumb,
       image: project1Main,
       code: {
-        html: '<!-- Código HTML del proyecto Galaxy -->',
-        css: '/* Código CSS del proyecto Galaxy */',
-        js: '// Código JavaScript del proyecto Galaxy',
-        react: '// Código react del proyecto Galaxy',
+        html: 'IOS Calculator Replica',
+        css: 'Code CSS',
+        js: 'Code JavaScript ',
+        react: 'Code React',
+        github:<NavLink to="https://franxis12.github.io/ISO-Calculator-Replica-/" className="link">https://franxis12.github.io/ISO-Calculator-Replica-/</NavLink>
+        ,
 
       },
     },
     {
       id: 2,
-      title: 'Nebula',
+      title: 'My personal portfolio',
       thumbnail: project2Thumb,
       image: project2Main,
       code: {
-        html: '<!-- Código HTML del proyecto Nebula -->',
-        css: '/* Código CSS del proyecto Nebula */',
-        js: '// Código JavaScript del proyecto Nebula',
-        react: '// Código react del proyecto Galaxy',
+        html: 'This project dont have a HTML code',
+        css: 'Code CSS',
+        js: 'Code JavaScript',
+        react: 'Code React',
+        github:<NavLink to="https://github.com/franxis12/my-portfolio" className="link">https://github.com/franxis12/my-portfolio</NavLink>,
+
       },
     },
     {
       id: 3,
-      title: 'Cosmos',
+      title: 'Inspection App',
       thumbnail: project3Thumb,
       image: project3Main,
       code: {
-        html: '<!-- Código HTML del proyecto Cosmos -->',
-        css: '/* Código CSS del proyecto Cosmos */',
-        js: '// Código JavaScript del proyecto Cosmos',
-        react: '// Código react del proyecto Galaxy',
+        html: 'This project dont have a HTML code',
+        css: 'This project dont have a CSS code',
+        js: 'This project dont have a JavaScript code',
+        react: 'This project dont have a React code',
+        github: 'https://franxis12.github.io/ISO-Calculator-Replica-/',
+
 
       },
     },
@@ -54,7 +60,6 @@ function Projects() {
   return (
     <section className="projects-page">
       <div className="projects-layout">
-        {/* Sidebar con miniaturas */}
         <aside className="projects-sidebar">
           <h2>Projects</h2>
           <div className="thumbnail-list">
@@ -70,7 +75,6 @@ function Projects() {
           </div>
         </aside>
 
-        {/* Contenido del proyecto */}
         <main className="project-main">
           <div className="project-preview">
             <img src={activeProject.image} alt={activeProject.title} />
@@ -93,12 +97,20 @@ function Projects() {
 
           <div className="code-section react">
             <h3>Code [React]</h3>
-            <pre>{activeProject.code.js}</pre>
+            <pre>{activeProject.code.react}</pre>
+          </div>
+
+          <div className="code-section react">
+            <h3>GitHub</h3>
+            <pre>{activeProject.code.github}</pre>
           </div>
 
           <div className="resources">
   <h3>Resources</h3>
   <div className="resource-grid">
+  <div className="resource-card">
+      <p>w3schools</p>
+    </div>
     <div className="resource-card">
       <p>React Documentation</p>
     </div>

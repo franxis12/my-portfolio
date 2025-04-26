@@ -14,7 +14,6 @@ import { NavLink } from 'react-router-dom';
 function Home() {
   return (
     <section className="home">
-      {/* Hero */}
       <div className="hero">
         <div className="hero-text">
           <h1>FRANCIS MARTINEZ</h1>
@@ -34,7 +33,6 @@ function Home() {
         </div>
       </div>
 
-      {/* About */}
       <div className="about">
         <h3>About</h3>
         <div className="about-content">
@@ -55,7 +53,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Skills */}
       <div className="skills">
         <h3>Skills</h3>
         <div className="skills-icons">
@@ -68,7 +65,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Projects resumen */}
       <div className="projects">
         <h3>Projects</h3>
         <div className="projects-list">
@@ -83,15 +79,17 @@ function Home() {
         </div>
       </div>
 
-      {/* Contact */}
       <div className="contact">
         <h3>Contact</h3>
         <form className="contact-form">
+            <div className="contact-inputs">
           <input type="name" placeholder="Name" />
           <input type="email" placeholder="Email" />
-
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Submit</button>
+          </div>
+          <div className="contact-textarea">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </div>
         </form>
         <p className="disclaimer">
           The personal data collected in this form is only used to respond to
